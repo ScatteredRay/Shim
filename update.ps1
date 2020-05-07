@@ -5,6 +5,6 @@ if (!(Test-Path -path $destinationFolder)) {
     exit 1
 }
 
-nuget update packages.config -r $destinationFolder
+.\nuget update packages.config -r $destinationFolder
 Remove-Item $destinationFolder -Force -Recurse | Out-Null
-nuget install packages.config -o $destinationFolder -ExcludeVersion
+.\nuget install packages.config -o $destinationFolder -ExcludeVersion
